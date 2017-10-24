@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#Autenticação e contas do usuário
+gem 'devise'
 #UI do Twitter
 gem 'bootstrap-sass', '~> 3.3.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
