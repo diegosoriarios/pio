@@ -1,2 +1,81 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<% if !user_signed_in? %>
+    <style>
+        body{
+            background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+                        url('../bg.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        h1{
+            color: white;
+            font-weight: bold;
+        }
+        .container-index{
+            margin-right: 15%;
+            margin-left: 15%;
+        }
+        .text{
+            color: white;
+            font-weight: 300;
+            font-size: 130%;
+        }
+        .footer-links{
+            color: white;
+            margin-top: 20%;
+            margin-left: 15%;
+        }
+        .footer-links li{
+            float: left;
+            list-style-type: none;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .login{
+            margin-top: 7.5%;
+            float: right;
+            width: 300px;
+            height: 150px;
+        }
+        .signup{
+            float: right;
+            width: 300px;
+            height: 250px;
+        }
+    </style>
+    <div class="container-index row">
+        <div class="col-sm-6">
+            <h1>Bem Vindo ao Pio.</h1>
+            <p class="text">
+                Conecte-se com seus amigos. <br>
+                Converse com novos amigos.<br>
+                Compartilhe suas aventuras. <br>
+                Como um blog, mas com menos caracteres!
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <div class="login panel">
+        
+
+            </div>
+            <div class="signup panel">
+        
+
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <ul class="footer-links">
+                <li><a href="/sobre">Sobre</a></li> 
+                <li><a href="/ajuda">Ajuda</a></li> 
+                <li><a href="/programadores">Programadores</a></li> 
+                <li><a href="/configurações">Configurações</a></li> 
+                <li><a href="/">© 2017 Pio</a></li>
+            </ul>
+        </div>
+    </div>
+<% else %>
+    
+    <script>document.location = "/home"</script>
+
+<% end %>
